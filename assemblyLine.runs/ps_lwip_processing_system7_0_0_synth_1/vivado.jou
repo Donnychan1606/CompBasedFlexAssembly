@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Jul 11 13:35:26 2020
+# Process ID: 5212
+# Current directory: D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.runs/ps_lwip_processing_system7_0_0_synth_1
+# Command line: vivado.exe -log ps_lwip_processing_system7_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ps_lwip_processing_system7_0_0.tcl
+# Log file: D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.runs/ps_lwip_processing_system7_0_0_synth_1/ps_lwip_processing_system7_0_0.vds
+# Journal file: D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.runs/ps_lwip_processing_system7_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source ps_lwip_processing_system7_0_0.tcl -notrace

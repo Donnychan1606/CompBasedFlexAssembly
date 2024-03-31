@@ -1,0 +1,151 @@
+21:03:16 **** Auto Build of configuration Debug for project assemblyLine ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/freertos_tcp_perf_client.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_tcp_perf_client.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_tcp_perf_client.d" -MT"src/freertos_tcp_perf_client.o" -o "src/freertos_tcp_perf_client.o" "../src/freertos_tcp_perf_client.c"
+'Finished building: ../src/freertos_tcp_perf_client.c'
+' '
+'Building file: ../src/i2c_access.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/i2c_access.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/i2c_access.d" -MT"src/i2c_access.o" -o "src/i2c_access.o" "../src/i2c_access.c"
+'Finished building: ../src/i2c_access.c'
+' '
+'Building file: ../src/iic_phyreset.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+'Finished building: ../src/iic_phyreset.c'
+' '
+'Building file: ../src/key.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/key.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/key.d" -MT"src/key.o" -o "src/key.o" "../src/key.c"
+'Finished building: ../src/key.c'
+' '
+'Building file: ../src/limit_switch.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/limit_switch.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/limit_switch.d" -MT"src/limit_switch.o" -o "src/limit_switch.o" "../src/limit_switch.c"
+../src/limit_switch.c:5:16: warning: 'gpio_inst' defined but not used [-Wunused-variable]
+ static XGpioPs gpio_inst;
+                ^~~~~~~~~
+'Finished building: ../src/limit_switch.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:4:0:
+../src/robotic_arm.h:10:0: warning: "MSG_ROBOTIC_ARM_LOAD" redefined
+ #define MSG_ROBOTIC_ARM_LOAD    3
+ 
+In file included from ../src/main.c:3:0:
+../src/state_machine.h:19:0: note: this is the location of the previous definition
+ #define MSG_ROBOTIC_ARM_LOAD    104
+ 
+In file included from ../src/main.c:4:0:
+../src/robotic_arm.h:11:0: warning: "MSG_ROBOTIC_ARM_UNLOAD" redefined
+ #define MSG_ROBOTIC_ARM_UNLOAD  4
+ 
+In file included from ../src/main.c:3:0:
+../src/state_machine.h:20:0: note: this is the location of the previous definition
+ #define MSG_ROBOTIC_ARM_UNLOAD  105
+ 
+In file included from ../src/main.c:5:0:
+../src/three_axes_platform.h:8:0: warning: "MSG_THREE_AXES_PLATFORM_START" redefined
+ #define MSG_THREE_AXES_PLATFORM_START       1
+ 
+In file included from ../src/main.c:3:0:
+../src/state_machine.h:21:0: note: this is the location of the previous definition
+ #define MSG_THREE_AXES_PLATFORM_START   106
+ 
+../src/main.c: In function 'main':
+../src/main.c:13:5: warning: implicit declaration of function 'xTaskCreate'; did you mean 'xTaskHandle'? [-Wimplicit-function-declaration]
+     xTaskCreate(state_machine_task, "StateMachine", configMINIMAL_STACK_SIZE, NULL, 1, NULL);
+     ^~~~~~~~~~~
+     xTaskHandle
+../src/main.c:19:5: warning: implicit declaration of function 'vTaskStartScheduler'; did you mean 'xPortStartScheduler'? [-Wimplicit-function-declaration]
+     vTaskStartScheduler();
+     ^~~~~~~~~~~~~~~~~~~
+     xPortStartScheduler
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/message_center.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/message_center.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/message_center.d" -MT"src/message_center.o" -o "src/message_center.o" "../src/message_center.c"
+../src/message_center.c: In function 'message_center_init':
+../src/message_center.c:14:5: warning: implicit declaration of function 'xTaskCreate'; did you mean 'xTaskHandle'? [-Wimplicit-function-declaration]
+     xTaskCreate(MessageCenterTask, "MessageCenter", MESSAGE_CENTER_TASK_STACK_SIZE, NULL, 1, NULL);
+     ^~~~~~~~~~~
+     xTaskHandle
+'Finished building: ../src/message_center.c'
+' '
+'Building file: ../src/platform_zynqmp.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform_zynqmp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform_zynqmp.d" -MT"src/platform_zynqmp.o" -o "src/platform_zynqmp.o" "../src/platform_zynqmp.c"
+'Finished building: ../src/platform_zynqmp.c'
+' '
+'Building file: ../src/robotic_arm.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/robotic_arm.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/robotic_arm.d" -MT"src/robotic_arm.o" -o "src/robotic_arm.o" "../src/robotic_arm.c"
+'Finished building: ../src/robotic_arm.c'
+' '
+'Building file: ../src/sfp.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sfp.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/sfp.d" -MT"src/sfp.o" -o "src/sfp.o" "../src/sfp.c"
+'Finished building: ../src/sfp.c'
+' '
+'Building file: ../src/si5324.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/si5324.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/si5324.d" -MT"src/si5324.o" -o "src/si5324.o" "../src/si5324.c"
+'Finished building: ../src/si5324.c'
+' '
+'Building file: ../src/state_machine.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/state_machine.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/state_machine.d" -MT"src/state_machine.o" -o "src/state_machine.o" "../src/state_machine.c"
+../src/state_machine.c: In function 'state_machine_task':
+../src/state_machine.c:35:24: warning: 'msg.id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 if (msg.id == MSG_START) {
+                     ~~~^~~
+../src/state_machine.c:45:24: warning: 'msg.id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 if (msg.id == MSG_LOADING_DONE) {
+                     ~~~^~~
+../src/state_machine.c:55:24: warning: 'msg.id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 if (msg.id == MSG_PROCESSING_DONE) {
+                     ~~~^~~
+../src/state_machine.c:65:24: warning: 'msg.id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 if (msg.id == MSG_UNLOADING_DONE) {
+                     ~~~^~~
+../src/state_machine.c:72:24: warning: 'msg.id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 if (msg.id == MSG_PRINT_START) {
+                     ~~~^~~
+../src/state_machine.c:81:24: warning: 'msg.id' may be used uninitialized in this function [-Wmaybe-uninitialized]
+                 if (msg.id == MSG_PRINT_DONE) {
+                     ~~~^~~
+'Finished building: ../src/state_machine.c'
+' '
+'Building file: ../src/stepper_motor.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/stepper_motor.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/stepper_motor.d" -MT"src/stepper_motor.o" -o "src/stepper_motor.o" "../src/stepper_motor.c"
+../src/stepper_motor.c:5:16: warning: 'gpio_inst' defined but not used [-Wunused-variable]
+ static XGpioPs gpio_inst;
+                ^~~~~~~~~
+'Finished building: ../src/stepper_motor.c'
+' '
+'Building file: ../src/three_axes_platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/three_axes_platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../assemblyLine_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/three_axes_platform.d" -MT"src/three_axes_platform.o" -o "src/three_axes_platform.o" "../src/three_axes_platform.c"
+../src/three_axes_platform.c: In function 'three_axes_platform_task':
+../src/three_axes_platform.c:47:20: warning: 'msg.id' is used uninitialized in this function [-Wuninitialized]
+         switch (msg.id) {
+                 ~~~^~~
+'Finished building: ../src/three_axes_platform.c'
+' '
+'Building target: assemblyLine.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../assemblyLine_bsp/ps7_cortexa9_0/lib -o "assemblyLine.elf"  ./src/error_handling.o ./src/freertos_tcp_perf_client.o ./src/i2c_access.o ./src/iic_phyreset.o ./src/key.o ./src/limit_switch.o ./src/main.o ./src/message_center.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynqmp.o ./src/robotic_arm.o ./src/sfp.o ./src/si5324.o ./src/state_machine.o ./src/stepper_motor.o ./src/three_axes_platform.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+d:/xilinx/sdk/2018.3/gnu/aarch32/nt/gcc-arm-none-eabi/bin/../arm-none-eabi/libc/usr/lib/v7-a/fpv3/hard\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+gettimeofdayr.c:(.text+0x24): undefined reference to `_gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: assemblyLine.elf] Error 1
+
+21:03:19 Build Finished (took 3s.318ms)
+

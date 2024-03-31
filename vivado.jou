@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 28 20:59:46 2024
+# Process ID: 3604
+# Current directory: C:/Users/DV013/Desktop/assemblyLine
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17320 C:\Users\DV013\Desktop\assemblyLine\assemblyLine.xpr
+# Log file: C:/Users/DV013/Desktop/assemblyLine/vivado.log
+# Journal file: C:/Users/DV013/Desktop/assemblyLine\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/DV013/Desktop/assemblyLine/assemblyLine.xpr
+update_compile_order -fileset sources_1
+make_wrapper -files [get_files C:/Users/DV013/Desktop/assemblyLine/assemblyLine.srcs/sources_1/bd/ps_lwip/ps_lwip.bd] -top
+generate_target all [get_files  C:/Users/DV013/Desktop/assemblyLine/assemblyLine.srcs/sources_1/bd/ps_lwip/ps_lwip.bd]
+export_ip_user_files -of_objects [get_files C:/Users/DV013/Desktop/assemblyLine/assemblyLine.srcs/sources_1/bd/ps_lwip/ps_lwip.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/DV013/Desktop/assemblyLine/assemblyLine.srcs/sources_1/bd/ps_lwip/ps_lwip.bd]
+export_simulation -of_objects [get_files C:/Users/DV013/Desktop/assemblyLine/assemblyLine.srcs/sources_1/bd/ps_lwip/ps_lwip.bd] -directory C:/Users/DV013/Desktop/assemblyLine/assemblyLine.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/DV013/Desktop/assemblyLine/assemblyLine.ip_user_files -ipstatic_source_dir C:/Users/DV013/Desktop/assemblyLine/assemblyLine.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/DV013/Desktop/assemblyLine/assemblyLine.cache/compile_simlib/modelsim} {questa=C:/Users/DV013/Desktop/assemblyLine/assemblyLine.cache/compile_simlib/questa} {riviera=C:/Users/DV013/Desktop/assemblyLine/assemblyLine.cache/compile_simlib/riviera} {activehdl=C:/Users/DV013/Desktop/assemblyLine/assemblyLine.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
+file copy -force C:/Users/DV013/Desktop/assemblyLine/assemblyLine.runs/impl_1/ps_lwip_wrapper.sysdef C:/Users/DV013/Desktop/assemblyLine/assemblyLine.sdk/ps_lwip_wrapper.hdf
+
+launch_sdk -workspace C:/Users/DV013/Desktop/assemblyLine/assemblyLine.sdk -hwspec C:/Users/DV013/Desktop/assemblyLine/assemblyLine.sdk/ps_lwip_wrapper.hdf

@@ -1,0 +1,82 @@
+13:38:02 INFO  : Registering command handlers for SDK TCF services
+13:38:02 INFO  : Launching XSCT server: xsct.bat -interactive D:\Z7-LITE-7020\04_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\temp_xsdb_launch_script.tcl
+13:38:04 INFO  : XSCT server has started successfully.
+13:38:05 INFO  : Successfully done setting XSCT server connection channel  
+13:38:05 INFO  : Successfully done setting SDK workspace  
+13:38:05 INFO  : Processing command line option -hwspec D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper.hdf.
+13:42:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:15 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+13:42:15 INFO  : 'jtag frequency' command is executed.
+13:42:15 INFO  : Sourcing of 'D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:42:15 INFO  : Context for 'APU' is selected.
+13:42:15 INFO  : System reset is completed.
+13:42:18 INFO  : 'after 3000' command is executed.
+13:42:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1' command is executed.
+13:42:22 INFO  : FPGA configured successfully with bitstream "D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper_hw_platform_0/ps_lwip_wrapper.bit"
+13:42:22 INFO  : Context for 'APU' is selected.
+13:42:22 INFO  : Hardware design information is loaded from 'D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper_hw_platform_0/system.hdf'.
+13:42:22 INFO  : 'configparams force-mem-access 1' command is executed.
+13:42:22 INFO  : Context for 'APU' is selected.
+13:42:22 INFO  : 'ps7_init' command is executed.
+13:42:22 INFO  : 'ps7_post_config' command is executed.
+13:42:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:22 INFO  : The application 'D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip/Debug/ps_lwip.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:22 INFO  : 'configparams force-mem-access 0' command is executed.
+13:42:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0} -index 1
+fpga -file D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper_hw_platform_0/ps_lwip_wrapper.bit
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+loadhw -hw D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+dow D:/Z7-LITE-7020/04_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip/Debug/ps_lwip.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:42:23 INFO  : Memory regions updated for context APU
+13:42:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:23 INFO  : 'con' command is executed.
+13:42:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS2 201706300081"} -index 0
+con
+----------------End of Script----------------
+
+13:42:23 INFO  : Launch script is exported to file 'D:\Z7-LITE-7020\04_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_ps_lwip.elf_on_local.tcl'
+13:42:52 INFO  : Invoking Bootgen: bootgen -image ps_lwip.bif -arch zynq -o D:\Z7-LITE-7020\04_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\ps_lwip\bootimage\BOOT.bin
+13:42:52 INFO  : Creating new bif file D:\Z7-LITE-7020\04_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\ps_lwip\bootimage\ps_lwip.bif
+13:42:54 INFO  : Bootgen command execution is done.
+13:45:46 INFO  : Disconnected from the channel tcfchan#1.
+19:35:13 INFO  : Registering command handlers for SDK TCF services
+19:35:13 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\luo-cmg\Desktop\02_SDK_Demo\03_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\temp_xsdb_launch_script.tcl
+19:35:16 INFO  : XSCT server has started successfully.
+19:35:17 INFO  : Successfully done setting XSCT server connection channel  
+19:35:17 INFO  : Successfully done setting SDK workspace  
+19:35:17 INFO  : Processing command line option -hwspec C:/Users/luo-cmg/Desktop/02_SDK_Demo/03_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper.hdf.
+19:54:07 INFO  : Registering command handlers for SDK TCF services
+19:54:07 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\luo-cmg\Desktop\02_SDK_Demo\03_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\temp_xsdb_launch_script.tcl
+19:54:11 INFO  : XSCT server has started successfully.
+19:54:11 INFO  : Successfully done setting XSCT server connection channel  
+19:54:11 INFO  : Successfully done setting SDK workspace  
+19:54:11 INFO  : Processing command line option -hwspec C:/Users/luo-cmg/Desktop/02_SDK_Demo/03_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper.hdf.
+19:54:11 INFO  : Checking for hwspec changes in the project ps_lwip_wrapper_hw_platform_1.
+20:53:12 INFO  : Registering command handlers for SDK TCF services
+20:53:12 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\luo-cmg\Desktop\02_SDK_Demo\03_SDK_Demo\10_ps_lwip\ps_lwip\ps_lwip.sdk\temp_xsdb_launch_script.tcl
+20:53:15 INFO  : XSCT server has started successfully.
+20:53:15 INFO  : Successfully done setting XSCT server connection channel  
+20:53:15 INFO  : Successfully done setting SDK workspace  
+20:53:15 INFO  : Processing command line option -hwspec C:/Users/luo-cmg/Desktop/02_SDK_Demo/03_SDK_Demo/10_ps_lwip/ps_lwip/ps_lwip.sdk/ps_lwip_wrapper.hdf.
+20:53:15 INFO  : Checking for hwspec changes in the project ps_lwip_wrapper_hw_platform_1.
+21:01:56 INFO  : Registering command handlers for SDK TCF services
+21:01:56 INFO  : Launching XSCT server: xsct.bat -interactive C:\Users\DV013\Desktop\assemblyLine\assemblyLine.sdk\temp_xsdb_launch_script.tcl
+21:01:58 INFO  : XSCT server has started successfully.
+21:01:58 INFO  : Successfully done setting XSCT server connection channel  
+21:01:59 INFO  : Successfully done setting SDK workspace  
+21:01:59 INFO  : Processing command line option -hwspec C:/Users/DV013/Desktop/assemblyLine/assemblyLine.sdk/ps_lwip_wrapper.hdf.
